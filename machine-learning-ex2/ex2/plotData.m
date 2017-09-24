@@ -16,8 +16,8 @@ idx1 = find(y == 1); %find all 1 elements index.
 idx2 = find(y == 0); %find all 0 elements index.
 X1 = X(idx1,:); %get all elements for y == 1
 X2 = X(idx2,:); %get all elements for y == 0
-scatter(X1(:,1), X1(:,2),'k', '+');
-scatter(X2(:,1), X2(:,2),'k', 'o');
+plot(X1(:,1), X1(:,2),'k+', 'LineWidth',2,'MarkerSize',7);
+plot(X2(:,1), X2(:,2),'ko', 'MarkerFaceColor','y','MarkerSize',7);
 
 
 % =========================================================================
