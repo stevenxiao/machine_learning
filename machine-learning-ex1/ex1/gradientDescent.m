@@ -18,17 +18,15 @@ for iter = 1:num_iters
     %
     n = length(theta);
     sum = zeros(n, 1);
-    for i = 1:m
-      for j = 1:n
-        sum(j) = sum(j) + (X(i,:)*theta - y(i))*X(i,j);
-        %sum1 = sum1 + (X(i,:)*theta - y(i))*X(i,2);
-      %sum2 = sum2 + (X(i,:)*theta - y(i))*X(i,2);
-      end
+    %for i = 1:m
+    %  for j = 1:n
+    %    sum(j) = sum(j) + (X(i,:)*theta - y(i))*X(i,j);
+    %  end
+    %end
+    for j = 1:n
+      sum(j) = (X * theta - y)' * X(:,j);
     end
-    %temp1 = theta(1) - alpha * sum1/m;
-    %temp2 = theta(2) - alpha * sum2/m;
-    %theta(1) = temp1;
-    %theta(2) = temp2;
+ 
     temp = theta - alpha * sum / m;
     theta = temp;
 
