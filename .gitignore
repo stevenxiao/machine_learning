@@ -1,2 +1,4 @@
 token.mat
 *.swp
+octave-workspace
+.DS_Store
